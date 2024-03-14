@@ -185,7 +185,7 @@ export default class extends Component {
       date: new Date(date),
       isDisabled: this.dayIsDisabled(date),
       isFocused: this.focusedId === id,
-      isCurrentMonth: date.getMonth() === this.currentCenter.getMonth(),
+      isCurrentMonth: isSame(date, this.currentCenter, 'month'),
       isToday: isSame(date, today, 'day'),
       isSelected: this.dayIsSelected(date, calendar),
     });
